@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(add(1, 2))
+        print(isEqual(1, 1))
         
     }
 
@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let add = { (x: Int, y: Int) -> Int in
-        return x + y
+    let isEqual: (Int, Int) -> Bool = {
+        return $0 == $1
     }
 
 
