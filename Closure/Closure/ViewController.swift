@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(lengthOfString("I contain 23 characters"))
+        print(add(1, 2))
         
     }
 
@@ -23,8 +23,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let lengthOfString = { (string: String) -> Int in
-        return string.count
+    let add = { (x: Int, y: Int) -> Int in
+        return x + y
     }
 
 
