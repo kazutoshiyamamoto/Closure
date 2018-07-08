@@ -9,24 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        print(isEqual(1, 1))
-        
+        let numbers = [10, 20, 30, 40]
+        let moreThanTwenty = numbers.filter { $0 > 20 }
+        print(moreThanTwenty)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    let isEqual: (Int, Int) -> Bool = {
-        return $0 == $1
-    }
 
-
+    
 }
 
