@@ -13,14 +13,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let numbers = [10, 20, 30, 40]
-        let moreThanTwenty = numbers.filter { $0 > 20 }
-        print(moreThanTwenty)
+        
+
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // 戻り値がないクロージャ
+    let emptyReturnValueClosure: () -> Void = {}
+    
+    // 1つの戻り値を持つクロージャ
+    let singleReturnValueClosure: () -> Int = {
+        return 1
     }
     
 
