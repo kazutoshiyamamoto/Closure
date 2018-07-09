@@ -14,23 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
-
+        let greeting: (String) -> String
+        do {
+            let symbol = "!"
+            greeting = { user in
+                return "Hello, \(user)\(symbol)"
+            }
+        }
+        print(greeting("Ishikawa"))
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // 戻り値がないクロージャ
-    let emptyReturnValueClosure: () -> Void = {}
-    
-    // 1つの戻り値を持つクロージャ
-    let singleReturnValueClosure: () -> Int = {
-        return 1
-    }
-    
 
     
 }
