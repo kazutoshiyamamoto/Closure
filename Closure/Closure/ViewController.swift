@@ -10,25 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var queue = [() -> Void]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(or(true, false))
-
+        enqueue { print("executed") }
+        enqueue { print("executed") }
+        queue.forEach { $0() }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func or(_ lhs: Bool, _ rhs: @autoclosure () -> Bool) -> Bool {
-        if lhs {
-            return true
-        } else {
-            return rhs()
-        }
+    
+    func enqueue(operation: @escaping () -> Void) {
+        queue.append(operation)
     }
     
 }
