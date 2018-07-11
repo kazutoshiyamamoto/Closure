@@ -14,14 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let greeting: (String) -> String
-        do {
-            let symbol = "!"
-            greeting = { user in
-                return "Hello, \(user)\(symbol)"
-            }
-        }
-        print(greeting("Ishikawa"))
+        print(or(true, false))
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,6 +23,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func or(_ lhs: Bool, _ rhs: @autoclosure () -> Bool) -> Bool {
+        if lhs {
+            return true
+        } else {
+            return rhs()
+        }
+    }
     
 }
 
