@@ -10,20 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-//    var queue = [() -> Void]()
+    //    var queue = [() -> Void]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        enqueue { print("executed") }
-//        enqueue { print("executed") }
-//        queue.forEach { $0() }
+        //        enqueue { print("executed") }
+        //        enqueue { print("executed") }
+        //        queue.forEach { $0() }
         
         testFunc()
         testClosure()
         
         print(paramFunc(param: "もぐ"))
+        print(paramClosure("もぐ"))
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,10 +32,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func enqueue(operation: @escaping () -> Void) {
-//        queue.append(operation)
-//    }
-
+    //    func enqueue(operation: @escaping () -> Void) {
+    //        queue.append(operation)
+    //    }
+    
     func testFunc() {
         print("テストです")
     }
@@ -45,6 +46,11 @@ class ViewController: UIViewController {
     
     func paramFunc(param: String) -> String {
         return "こんにちは" + param + "さん"
+    }
+    
+    var paramClosure: (String) -> String = {
+        p -> String in
+        return "こんにちは" + p + "さん"
     }
     
 }
