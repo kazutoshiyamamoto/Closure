@@ -10,15 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var queue = [() -> Void]()
+//    var queue = [() -> Void]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        enqueue { print("executed") }
-        enqueue { print("executed") }
-        queue.forEach { $0() }
+//        enqueue { print("executed") }
+//        enqueue { print("executed") }
+//        queue.forEach { $0() }
+        
+        testFunc()
     }
     
     override func didReceiveMemoryWarning() {
@@ -26,8 +28,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func enqueue(operation: @escaping () -> Void) {
-        queue.append(operation)
+//    func enqueue(operation: @escaping () -> Void) {
+//        queue.append(operation)
+//    }
+
+    func testFunc() {
+        print("テストです")
     }
     
 }
