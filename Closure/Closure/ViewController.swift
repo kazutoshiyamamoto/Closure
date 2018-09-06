@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         print(paramClosure("もぐ"))
         
         intParamFunc(p1: 2, p2: 6)
+        intParamClosure(3,5)
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,5 +60,9 @@ class ViewController: UIViewController {
         return p1 + p2
     }
     
+    var intParamClosure: (Int, Int) -> Int = {
+        p1,p2 -> Int in
+        return p1 + p2
+    }
 }
 
