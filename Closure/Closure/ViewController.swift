@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         
         testFunc()
         testClosure()
+        
+        print(paramFunc(param: "もぐ"))
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,7 +43,9 @@ class ViewController: UIViewController {
         print("クロージャのテスト")
     }
     
-
+    func paramFunc(param: String) -> String {
+        return "こんにちは" + param + "さん"
+    }
     
 }
 
