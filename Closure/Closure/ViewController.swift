@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 //        queue.forEach { $0() }
         
         testFunc()
+        testClosure()
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,6 +36,12 @@ class ViewController: UIViewController {
     func testFunc() {
         print("テストです")
     }
+    
+    var testClosure: () -> () = {
+        print("クロージャのテスト")
+    }
+    
+
     
 }
 
